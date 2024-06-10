@@ -18,7 +18,7 @@ public class Student {
         this.lastName=in.nextLine();
         System.out.println("1-Freshman\n2-Sophomore\n3-Junior\n4-Senior | Enter Student Grade Year: ");
         this.gradeYear=in.nextInt();
-
+        in.close();
         setStudentID();;
     }
 
@@ -36,6 +36,7 @@ public class Student {
             System.out.println("Enter to enroll (Q to quit): ");
             Scanner in=new Scanner(System.in);
             String course=in.nextLine();
+            in.close();
             if(!course.equals("Q")){ 
                 courses=courses+"\n"+course;
                 tuitionBalance = tuitionBalance+costOfCourse;
@@ -59,6 +60,7 @@ public class Student {
         int payment=in.nextInt();
         tuitionBalance = tuitionBalance-payment;
         System.out.println("Thank you for your payment of $"+payment);
+        in.close();
         viewBalance();
     }
 
