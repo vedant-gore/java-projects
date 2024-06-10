@@ -6,6 +6,7 @@ public class StudentDatabaseApp {
         Scanner in=new Scanner(System.in);
         int numOfStudents = in.nextInt();
         Student[] students = new Student[numOfStudents];
+        in.close();
 
         for(int n=0; n<numOfStudents; n++){
             students[n] = new Student();
